@@ -19,6 +19,8 @@ public class TrainingRecord {
        tr.add(e);    
    } // addClass
    
+   
+   
    // look up the entry of a given day and month
    public String lookupEntry (int d, int m, int y) {
        ListIterator<Entry> iter = tr.listIterator();
@@ -28,17 +30,52 @@ public class TrainingRecord {
           if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) 
              result = current.getEntry();
             }
+       
+       
        return result;
    } // lookupEntry
+   // look up the entry of a given day and month
+   public String  SearchupEntries(int d, int m, int y) {
+       ListIterator<Entry> iter = tr.listIterator();
+       String result = "No entries found";
+       while (iter.hasNext()) {
+          Entry current = iter.next();
+          if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) 
+             result = current.getEntry();
+            }
+       
+       
+       return result;
+   } // lookupEntry
+   
+  // lookupEntry
+// look up the entry of a given day and month
+public String  TakeoffEntries(int d, int m, int y) {
+    ListIterator<Entry> iter = tr.listIterator();
+    String result = "No entries found";
+    while (iter.hasNext()) {
+       Entry current = iter.next();
+       if (current.getDay()==d && current.getMonth()==m && current.getYear()==y) 
+          result = current.getEntry();
+         }
+    
+    
+    return result;
+} // lookupEntry
+
    
    
   
    public int getNumberOfEntries(){
        return tr.size();
    }
+   
+   
    // Clear all entries
    public void clearAllEntries(){
        tr.clear();
    }
+   
+   
    
 } // TrainingRecord

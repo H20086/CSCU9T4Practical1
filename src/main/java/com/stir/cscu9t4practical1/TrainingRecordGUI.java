@@ -9,14 +9,20 @@ import java.lang.Number;
 
 public class TrainingRecordGUI extends JFrame implements ActionListener {
 
+	
+	
     private JTextField name = new JTextField(30);
     private JTextField day = new JTextField(2);
     private JTextField month = new JTextField(2);
     private JTextField year = new JTextField(4);
-    private JTextField hours = new JTextField(2);
-    private JTextField mins = new JTextField(2);
-    private JTextField secs = new JTextField(2);
+    private JTextField hours = new JTextField(8);
+    private JTextField mins = new JTextField(6);
+    private JTextField secs = new JTextField(3);
     private JTextField dist = new JTextField(4);
+    
+    
+    
+    
     private JLabel labn = new JLabel(" Name:");
     private JLabel labd = new JLabel(" Day:");
     private JLabel labm = new JLabel(" Month:");
@@ -25,9 +31,20 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
     private JLabel labmm = new JLabel(" Mins:");
     private JLabel labs = new JLabel(" Secs:");
     private JLabel labdist = new JLabel(" Distance (km):");
+    private JLabel labtr= new JLabel(" Terrain:");
+    private JLabel labtm = new JLabel(" tempo:");
+    private JLabel labwer = new JLabel(" where:");
+   
+    
+    
+    
+    
+    
     private JButton addR = new JButton("Add");
     private JButton lookUpByDate = new JButton("Look Up");
 
+    
+    
     private TrainingRecord myAthletes = new TrainingRecord();
 
     private JTextArea outputArea = new JTextArea(5, 50);
@@ -36,6 +53,8 @@ public class TrainingRecordGUI extends JFrame implements ActionListener {
         TrainingRecordGUI applic = new TrainingRecordGUI();
     } // main
 
+    
+    
     // set up the GUI 
     public TrainingRecordGUI() {
         super("Training Record");
